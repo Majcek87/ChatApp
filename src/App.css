@@ -1,38 +1,122 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	background: rgb(244, 223, 244);
+}
+
 .App {
-  text-align: center;
+	display: flex;
+	flex-direction: column;
+	height: 80vh;
+	margin-top: 80px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Header {
+	background-color: rgb(193, 110, 195);
+	border-bottom: solid 3px black;
+	color: #000000;
+	font-size: 16px;
+	margin: 0 auto;
+	overflow: visible;
+	padding: 20px;
+	text-align: left;
+	width: 30%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.MsgWrapper2 {
+	background-color: #8fb2c1;
+	flex-grow: 1;
+	margin: 0 auto;
+	overflow: auto;
+	padding: 20px 0;
+	width: 30%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Messages-message {
+	display: flex;
+	margin: 5px 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.MsgContainer {
+	display: inline-block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.MsgContainer > .User {
+	color: #000000;
+	display: block;
+	font-size: 25px;
+}
+
+.MsgContainer > .MsgContent {
+	background-color: #ffffff;
+	border-radius: 25px;
+	color: rgb(0, 0, 0);
+	display: inline-block;
+	font-size: 16px;
+	padding: 12px;
+}
+
+form {
+	background-color: rgb(193, 110, 195);
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding: 20px;
+	width: 30%;
+}
+
+input {
+	background-color: #4cd1e9;
+	border: 3px solid black;
+	color: rgb(0, 0, 0);
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	padding: 10px 30px;
+	width: 60%;
+}
+
+input::placeholder {
+	color: rgb(0, 0, 0);
+	opacity: 0.7;
+}
+
+button {
+	background-color: #e9f446;
+	border: 3px solid black;
+	color: rgb(0, 0, 0) ;
+	font-family: Arial, sans-serif ;
+	font-size: 18px ;
+	margin-left: 10px;
+	padding: 5px 50px;
+}
+
+@media (max-width: 480px) {
+	.App {
+		margin-top: 15px;
+		height: 95vh;
+	}
+
+	.Header {
+		width: 90%;
+	}
+
+	.MsgWrapper2 {
+		width: 90%;
+	}
+	form {
+		flex-wrap: wrap;
+		gap: 10px;
+		justify-content: center;
+		width: 90%;
+	}
+	input {
+		margin: 0 auto;
+		width: 90%;
+	}
+	button {
+		margin: 0 auto;
+		width: 90%;
+	}
 }
